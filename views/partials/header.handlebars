@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mongo Scraper</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav">
+                <li {{#if currentPage.index}} class="active" {{/if}}>
+                    <a href="/">Home</a>
+                </li>
+                <li {{#if currentPage.saved}} class="active" {{/if}}>
+                    <a href="/saved">Saved Articles</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {{#if currentPage.index}}
+                <li>
+                    <button id="scrapeArticles" type="button" class="btn btn-default btn-primary navbar-btn" data-loading-text="Scraping..." autocomplete="off">Scrape New Articles!</button>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>
